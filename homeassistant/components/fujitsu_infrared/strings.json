@@ -1,0 +1,94 @@
+{
+  "config": {
+    "abort": {
+      "already_configured": "[%key:common::config_flow::abort::already_configured_device%]",
+      "no_infrared_entities": "[%key:common::config_flow::abort::no_infrared_entities%]"
+    },
+    "error": {
+      "no_hvac_modes": "Select at least one supported mode."
+    },
+    "step": {
+      "user": {
+        "data": {
+          "hvac_modes": "Supported modes",
+          "infrared_entity_id": "[%key:common::config_flow::data::infrared_entity_id%]",
+          "infrared_receiver_entity_id": "[%key:common::config_flow::data::infrared_receiver_entity_id%]",
+          "protocol": "Temperature steps"
+        },
+        "data_description": {
+          "hvac_modes": "Select the operating modes your AC unit supports. Heat is not available on all models.",
+          "infrared_entity_id": "[%key:common::config_flow::data_description::infrared_entity_id%]",
+          "infrared_receiver_entity_id": "Optional — allows the integration to update state when the physical remote is used.",
+          "protocol": "Select half degrees only if your remote's display shows them, such as 24.5. Whole degrees works with every model. Half degrees needs a unit new enough to have shipped with a remote that supports them, and it does nothing at all on an older one."
+        },
+        "description": "Select an infrared emitter and the modes your Fujitsu AC supports.",
+        "title": "Set up Fujitsu AC"
+      }
+    }
+  },
+  "entity": {
+    "button": {
+      "economy": {
+        "name": "Economy mode"
+      },
+      "powerful": {
+        "name": "Powerful mode"
+      },
+      "step_horizontal_louvre": {
+        "name": "Move horizontal louvre"
+      },
+      "step_vertical_louvre": {
+        "name": "Move vertical louvre"
+      }
+    },
+    "climate": {
+      "fujitsu_ac": {
+        "state_attributes": {
+          "fan_mode": {
+            "state": {
+              "quiet": "Quiet"
+            }
+          }
+        }
+      }
+    },
+    "event": {
+      "received_command": {
+        "name": "Remote button",
+        "state_attributes": {
+          "event_type": {
+            "state": {
+              "economy": "Economy mode",
+              "powerful": "Powerful mode",
+              "step_horizontal_louvre": "Move horizontal louvre",
+              "step_vertical_louvre": "Move vertical louvre",
+              "test_run": "Test run",
+              "unknown": "Unknown",
+              "wlan_connect_method_1": "Wireless LAN connect, method 1",
+              "wlan_connect_method_2": "Wireless LAN connect, method 2",
+              "wlan_disable": "Wireless LAN off",
+              "wlan_enable": "Wireless LAN on"
+            }
+          }
+        }
+      }
+    }
+  },
+  "selector": {
+    "hvac_modes": {
+      "options": {
+        "cool": "Cool",
+        "dry": "Dry",
+        "fan_only": "Fan only",
+        "heat": "Heat",
+        "heat_cool": "Heat/Cool"
+      }
+    },
+    "protocol": {
+      "options": {
+        "extended": "Half degrees",
+        "standard": "Whole degrees"
+      }
+    }
+  }
+}

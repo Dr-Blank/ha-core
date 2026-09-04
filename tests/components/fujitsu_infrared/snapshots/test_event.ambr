@@ -1,0 +1,78 @@
+# serializer version: 1
+# name: test_entities[event.fujitsu_ac_remote_button-entry]
+  EntityRegistryEntrySnapshot({
+    'aliases': list([
+      None,
+    ]),
+    'area_id': None,
+    'capabilities': dict({
+      <EventEntityCapabilityAttribute.EVENT_TYPES: 'event_types'>: list([
+        'economy',
+        'powerful',
+        'step_vertical_louvre',
+        'step_horizontal_louvre',
+        'test_run',
+        'wlan_enable',
+        'wlan_disable',
+        'wlan_connect_method_1',
+        'wlan_connect_method_2',
+        'unknown',
+      ]),
+    }),
+    'config_entry_id': <ANY>,
+    'config_subentry_id': <ANY>,
+    'device_class': None,
+    'device_id': <ANY>,
+    'disabled_by': None,
+    'domain': 'event',
+    'entity_category': None,
+    'entity_id': 'event.fujitsu_ac_remote_button',
+    'has_entity_name': True,
+    'hidden_by': None,
+    'icon': None,
+    'id': <ANY>,
+    'labels': set({
+    }),
+    'name': None,
+    'object_id_base': 'Remote button',
+    'options': dict({
+    }),
+    'original_device_class': <EventDeviceClass.BUTTON: 'button'>,
+    'original_icon': None,
+    'original_name': 'Remote button',
+    'platform': 'fujitsu_infrared',
+    'previous_unique_id': None,
+    'suggested_object_id': None,
+    'supported_features': 0,
+    'translation_key': 'received_command',
+    'unique_id': '01JTEST0000000000000000001',
+    'unit_of_measurement': None,
+  })
+# ---
+# name: test_entities[event.fujitsu_ac_remote_button-state]
+  StateSnapshot({
+    'attributes': ReadOnlyDict({
+      <EntityStateAttribute.DEVICE_CLASS: 'device_class'>: 'button',
+      <EventEntityStateAttribute.EVENT_TYPE: 'event_type'>: None,
+      <EventEntityCapabilityAttribute.EVENT_TYPES: 'event_types'>: list([
+        'economy',
+        'powerful',
+        'step_vertical_louvre',
+        'step_horizontal_louvre',
+        'test_run',
+        'wlan_enable',
+        'wlan_disable',
+        'wlan_connect_method_1',
+        'wlan_connect_method_2',
+        'unknown',
+      ]),
+      <EntityStateAttribute.FRIENDLY_NAME: 'friendly_name'>: 'Fujitsu AC Remote button',
+    }),
+    'context': <ANY>,
+    'entity_id': 'event.fujitsu_ac_remote_button',
+    'last_changed': <ANY>,
+    'last_reported': <ANY>,
+    'last_updated': <ANY>,
+    'state': 'unknown',
+  })
+# ---

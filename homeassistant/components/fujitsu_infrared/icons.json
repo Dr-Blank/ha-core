@@ -1,0 +1,29 @@
+{
+  "entity": {
+    "button": {
+      "economy": {
+        "default": "mdi:leaf"
+      },
+      "powerful": {
+        "default": "mdi:rocket-launch"
+      },
+      "step_horizontal_louvre": {
+        "default": "mdi:arrow-left-right"
+      },
+      "step_vertical_louvre": {
+        "default": "mdi:arrow-up-down"
+      }
+    },
+    "climate": {
+      "fujitsu_ac": {
+        "state_attributes": {
+          "fan_mode": {
+            "state": {
+              "quiet": "mdi:volume-off"
+            }
+          }
+        }
+      }
+    }
+  }
+}
